@@ -1,0 +1,6 @@
+source https://nuget.org/api/v2
+nuget Suave
+nuget Mono.Posix
+nuget CassandraCSharpDriver
+nuget FSharp.Data
+nuget FSharp.Collections.ParallelSeq

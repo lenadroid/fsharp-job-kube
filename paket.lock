@@ -1,0 +1,14 @@
+NUGET
+  remote: https://www.nuget.org/api/v2
+    CassandraCSharpDriver (3.0.7)
+      lz4net (>= 1.0.5.93)
+    FSharp.Collections.ParallelSeq (1.0.2)
+    FSharp.Core (4.0.0.1)
+    FSharp.Data (2.4.2)
+      FSharp.Core (>= 4.0.0.1)
+      Zlib.Portable (>= 1.11) - restriction: >= portable-net45+win8+wp8+wpa81
+    lz4net (1.0.10.93)
+    Mono.Posix (4.0)
+    Suave (1.1.3)
+      FSharp.Core (>= 3.1.2.5)
+    Zlib.Portable (1.11) - restriction: >= portable-net45+win8+wp8+wpa81

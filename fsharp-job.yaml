@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: "process-item-$START"
+  labels:
+    jobgroup: fsharpjob
+spec:
+  template:
+    metadata:
+      name: fsharpjob
+      labels:
+        jobgroup: fsharpjob
+    spec:
+      containers:
+      - name: fsharpjob
+        image: lenadroid/fsharp-job
+        command:
+          - fsharpi
+          - HousingData.fsx
+          - "$START"
+          - "$STEP"
+          - "$INCR"
+        resources:
+          requests:
+            memory: "1Gi"
+            cpu: "870m"
+          limits:
+            memory: "1Gi"
+            cpu: "870m"
+      restartPolicy: Never
