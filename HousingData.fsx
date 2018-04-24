@@ -183,8 +183,8 @@ persistAddressesParallel session startIndex writesPerJob increment
 //         row.GetValue<string>("episode"),
 //         row.GetValue<int>("rating"))
 
-// let getRecommendationsByKeyword (session: ISession) =
-//     session.Execute("SELECT * FROM recommendations WHERE keyword = 'tyrion' ORDER BY rating ASC;")
+// let getRecommendationsByKeyword (session: ISession) (keyword: string) =
+//     session.Execute(session.Prepare("SELECT * FROM showrecommender.recommendations WHERE keyword = ? ORDER BY rating ASC;").Bind(keyword))
 
-// let entry = getRecommendationsByKeyword session
+// let entry = getRecommendationsByKeyword session "tyrion"
 // entry.GetRows() |> Seq.iter displayRecommendationRow
